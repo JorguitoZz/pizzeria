@@ -9,12 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'portada': 'url("/portada.png")',
+        'fondo2': 'url("/bg-2.png")',
+        'fondo3': 'url("/bg-3.png")',
+        'portadadesk': 'url("/background-portada.png")',
       },
     },
   },
   plugins: [],
 };
+
 export default config;

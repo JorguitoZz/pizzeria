@@ -1,113 +1,73 @@
-import Image from "next/image";
+import { lobster, montserrat } from './fonts/fons';
+import { Header } from './ui/Header';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <main>
+        <section className='bg-portada lg:bg-portadadesk bg-cover bg-no-repeat pt-6 pb-32 px-6 sm:px-24 lg:h-[60vh] xl:h-[80vh] xl:max-h-[600px] lg:pt-12 lg:px-32 '>
+          <Header version={false}/>
+          <div className='lg:w-[40%]'>
+            <h1 className={`${lobster.className} text-white text-[45px] text-center mb-10 mt-16 lg:text-left`}>Delicious Pizza</h1>
+            <p className={`${montserrat.className} text-white text-center mb-10 lg:text-left`}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit sit amet massa ac dapibus. Nullam eros neque.
+            </p>
+            <div className={`${montserrat.className} text-white flex gap-4 justify-center lg:justify-normal`}>
+              <button className='bg-red-600 w-32 h-10'>Ordenar</button>
+              <button className='border w-32 h-10'>Menu</button>
+            </div>
+          </div>
+        </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <section className='flex flex-col gap-5 py-16 sm:w-[80%] mx-auto md:flex-row md:w-[95%] md:items-center'>
+          <article className='px-8 md:w-[50%] md:px-0'>
+            <h2 className={`${lobster.className} text-[45px] text-center md:text-[30px] leading-[40px] lg:text-[45px]`}>
+              Welcome to <br /><span className='text-red-600'>Delicious Pizza</span>
+            </h2>
+            <p className={`${montserrat.className} text-center md:text-[16px] mt-4 w-[80%] mx-auto lg:text-[18px]`}>
+              Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
+            </p>
+          </article>
+          <figure className='px-5 md:w-[50%]'>
+            <img src="/img-section1.png" alt='Horno' />
+          </figure>
+        </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <section className='bg-fondo2 bg-cover bg-center py-[100px]'>
+          <h2 className={`${lobster.className} text-red-600 text-center text-[36px] lg:text-[45px]`}>Descubre <br /><span className='text-[45px] text-white'>Delicious Pizza</span></h2>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <section className='flex flex-col gap-5 py-16 sm:w-[80%] mx-auto md:w-[95%] md:flex-row md:items-center'>
+          <article className='px-8 flex flex-col justify-center gap-3 md:w-[50%] md:px-0 lg:px-[30px]'>
+            <h2 className={`${lobster.className} text-[35px] leading-[45px] text-center md:text-[30px]  lg:text-[40px]`}>
+              Ordena desde la comodidad de tu hogar,<span className='text-red-600'> contamos con un excelente delivery</span>
+            </h2>
+            <button className='bg-red-600 w-32 block mx-auto h-10 text-white'>Ordenar</button>
+          </article>
+          <figure className='px-5 md:w-[50%]'>
+            <img src="/img-section3.png" alt='Amigos comiendo pizza' />
+          </figure>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <section className='bg-fondo3 bg-cover bg-center py-[100px]'>
+          <h2 className={`${lobster.className} text-white text-center text-[36px] lg:text-[45px]`}>Cualquier <span className='text-red-600'>momento</span> es bueno para una <span className='text-red-600'>pizza</span></h2>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <section className='flex flex-col gap-5 py-16 sm:w-[80%] mx-auto md:w-[95%] md:flex-row md:items-center'>
+          <article className='px-8 flex flex-col justify-center gap-3 md:w-[50%] md:px-0'>
+            <h2 className={`${lobster.className} text-[35px] leading-[45px] text-center md:text-[30px] lg:text-[40px] w-[80%] mx-auto`}>
+              Acompaña con una <span className='text-red-600'>pizza</span> esos <span className='text-red-600'>momentos especiales</span>
+            </h2>
+            <p className={`${montserrat.className} text-center md:text-[16px] w-[80%] mx-auto lg:text-[18px]`}>
+              Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
+            </p>
+          </article>
+          <figure className='px-5 md:w-[50%]'>
+            <img src="/img-section4.png" alt='Amigos comiendo pizza' />
+          </figure>
+        </section>
+      </main>
+    </>
   );
 }
+
